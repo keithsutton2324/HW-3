@@ -74,4 +74,5 @@ function generatePassword() {
   // Display password
   console.log("password: ", password);
   document.getElementById("password1").innerHTML = password
+}  
 

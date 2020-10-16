@@ -63,9 +63,7 @@ function generatePassword() {
 
   if (useLowercase || useUppercase || useNumeric || useSpecial) {
     for (var i = 0; i < passwordLength; i++) {
-      // Generate a random number between 1 and passwordLength
-      // Math.floor will round down, meaning we would get a number between
-      //0 and passwordLength.
+      // Generate a random number between 0 and passwordLength
       var idx = Math.floor(Math.random() * validChars.length);
       password += validChars[idx]
       //console.log("idx: ", idx, "validChars[idx]: ", validChars[idx]);
@@ -76,5 +74,4 @@ function generatePassword() {
   console.log("password: ", password);
   document.getElementById("password1").innerHTML = password
 }
-
 

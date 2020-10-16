@@ -65,14 +65,14 @@ function generatePassword() {
     for (var i = 0; i < passwordLength; i++) {
       // Generate a random number between 1 and passwordLength
       // Math.floor will round down, meaning we would get a number between
-      //0 and passwordLength, so we'll always add 1 to bump it up.
-      var idx = Math.floor(Math.random() * validChars.length) + 1;
+      //0 and passwordLength.
+      var idx = Math.floor(Math.random() * validChars.length);
       password += validChars[idx]
+      //console.log("idx: ", idx, "validChars[idx]: ", validChars[idx]);
     }
   }
 
   // Display password
   console.log("password: ", password);
   document.getElementById("password1").innerHTML = password
-}  
 
